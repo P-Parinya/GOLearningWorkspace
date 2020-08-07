@@ -5,23 +5,23 @@ import (
 )
 
 // calculate and return values
-func innerCal(i int) int{
+func innerCal(number int) int{
 	f:=fibonacci()
-	if i == 0 || i==1{
-		return i
+	if number == 0 || number == 1{
+		return number
 	}
-	return f(i-1)+f(i-2)
+	return f(number-1)+f(number-2)
 }
 
 // func fibonacci to call inner calculator
-func fibonacci () func (i int) int {
+func fibonacci () func (number int) int {
 	return innerCal
 }
 
 // main func
 func main (){
 	f:=fibonacci()
-	for i :=0; i<10 ; i++ {
+	for i := 0 ; i < 10 ; i++ {
 		fmt.Println(f(i))
 	}
 }
