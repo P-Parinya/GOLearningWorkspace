@@ -19,7 +19,7 @@ func WordCount(s string) map[string]int {
 		_ , ok := counter[word] //check that word existed.
 		if ok {
 			//if which word was existed, increase count number by 1.
-			counter[word] = counter[word]+1
+			counter[word] += 1
 		}else{
 			//if which word was not existed, initial count number.
 			counter[word] = 1
