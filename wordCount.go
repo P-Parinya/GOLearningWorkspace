@@ -13,6 +13,9 @@ func WordCount(s string) map[string]int {
 
 	//loop check word by word.
 	for _,word:= range wordList{
+		
+		word = strings.TrimSuffix(word,",")
+		
 		_ , ok := counter[word] //check that word existed.
 		if ok {
 			//if which word was existed, increase count number by 1.
